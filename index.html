@@ -1,18 +1,161 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flames App</title>
-    <link rel="icon" type="image/x-icon" href="favicon.svg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.0.0/dist/fonts/geist-sans/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.0.0/dist/fonts/geist-mono/style.css">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atlas House Lifting</title>
+  <meta name="description" content="Professional house lifting and structural relocation. Licensed, insured, and trusted. Get a fast, no-obligation quote." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="module" src="https://unpkg.com/lucide@latest"></script>
+  <script type="module" defer src="/app.js"></script>
+  <style>
+    /* Ensure spline-viewer behaves like a full-bleed canvas */
+    spline-viewer { width: 100%; height: 100%; display: block; }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container navbar-inner">
+      <a href="#top" class="brand">
+        <span class="brand-badge" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>
+        </span>
+        Atlas House Lifting
+      </a>
+      <div class="navlinks">
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="actions">
+        <a class="btn ghost" href="tel:+10000000000">Call</a>
+        <a class="btn primary" href="#contact">Get a Quote</a>
+      </div>
+      <button id="menu-btn" class="menu-btn" aria-label="Open Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="mobile-menu">
+      <div class="wrap">
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="tel:+10000000000">Call Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="top" class="hero">
+    <div class="bg3d">
+      <!-- Spline web component -->
+      <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.55/build/spline-viewer.js"></script>
+      <spline-viewer loading-anim="spinner" url="https://prod.spline.design/N8g2VNcx8Rycz93J/scene.splinecode"></spline-viewer>
+    </div>
+    <div class="overlay" aria-hidden="true"></div>
+
+    <div class="content container">
+      <span class="badge">Licensed • Insured • Experienced</span>
+      <h1 class="reveal">House Lifting, Done Right.</h1>
+      <p class="reveal" style="transition-delay: .06s">We safely raise, level, and relocate structures with precision. Reduce flood risk, add a new level, or fix foundation issues—start with a free quote.</p>
+      <div class="actions reveal" style="transition-delay: .12s">
+        <a href="#contact" class="btn primary">Get a Free Quote</a>
+        <a href="#services" class="btn ghost">Explore Services</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Services -->
+  <section id="services" class="container">
+    <div class="section-header">
+      <h2 class="reveal">Services</h2>
+      <p class="reveal" style="transition-delay: .06s">From full structural lifts to foundation repair—we handle complex jobs with industry‑leading equipment and a safety‑first approach.</p>
+    </div>
+    <div class="grid cols-4">
+      <div class="card reveal">
+        <div class="icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>House Lifting</h3>
+        <p>Raise structures for flood mitigation, new basements, or repairs.</p>
+      </div>
+      <div class="card reveal" style="transition-delay:.04s">
+        <div class="icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V9l7-4 7 4v12"/><path d="M9 21V12h6v9"/></svg>
+        </div>
+        <h3>Leveling & Shoring</h3>
+        <p>Stabilization and precision leveling to correct settlement and sagging.</p>
+      </div>
+      <div class="card reveal" style="transition-delay:.08s">
+        <div class="icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h18"/><path d="M8 6h8"/><rect x="5" y="10" width="14" height="10" rx="2"/></svg>
+        </div>
+        <h3>Foundation Repair</h3>
+        <p>Piering, crack remediation, and reinforcement for long‑term integrity.</p>
+      </div>
+      <div class="card reveal" style="transition-delay:.12s">
+        <div class="icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16"/><path d="M10 11h10"/><path d="M4 15h16"/><path d="M4 11h3"/></svg>
+        </div>
+        <h3>Relocation</h3>
+        <p>Careful structural moves with route planning and permits handled.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="process" class="container">
+    <div class="section-header">
+      <h2 class="reveal">How It Works</h2>
+      <p class="reveal" style="transition-delay:.06s">A clear, efficient process keeps your project on time and stress‑free.</p>
+    </div>
+    <div class="grid cols-4">
+      <div class="card reveal"><h3>1. Assessment</h3><p>On‑site evaluation and detailed scope.</p></div>
+      <div class="card reveal" style="transition-delay:.04s"><h3>2. Plan</h3><p>Permits, engineering, and schedule.</p></div>
+      <div class="card reveal" style="transition-delay:.08s"><h3>3. Execute</h3><p>Lift, level, and secure with precision.</p></div>
+      <div class="card reveal" style="transition-delay:.12s"><h3>4. Wrap‑up</h3><p>Final checks and handover.</p></div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="container">
+    <div class="section-header">
+      <h2 class="reveal">Recent Projects</h2>
+      <p class="reveal" style="transition-delay:.06s">Snapshots from recent lifts and structural improvements.</p>
+    </div>
+    <div class="grid cols-3">
+      <div class="card reveal"><img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=80&w=1600&auto=format&fit=crop" alt="Project 1" /><h3>Flood Mitigation Lift</h3><p>Raised 6 feet with new pilings.</p></div>
+      <div class="card reveal" style="transition-delay:.06s"><img src="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1600&auto=format&fit=crop" alt="Project 2" /><h3>Foundation Leveling</h3><p>Corrected settlement and installed beams.</p></div>
+      <div class="card reveal" style="transition-delay:.12s"><img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1600&auto=format&fit=crop" alt="Project 3" /><h3>Relocation</h3><p>Moved structure 2 miles with full escort.</p></div>
+    </div>
+  </section>
+
+  <!-- CTA / Contact -->
+  <section id="contact" class="container cta">
+    <div class="panel reveal">
+      <h3>Request a fast, no‑obligation quote</h3>
+      <p>Tell us about your project. We’ll get back within one business day.</p>
+      <form action="https://formsubmit.co" method="POST" class="actions" onsubmit="this.querySelector('button[type=submit]').disabled=true">
+        <input type="hidden" name="_next" value="/" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input aria-label="Your Name" name="name" placeholder="Your name" required style="flex:1; min-width: 200px; padding: 10px 12px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); color: var(--text);" />
+        <input type="email" aria-label="Email" name="email" placeholder="Email" required style="flex:1; min-width: 220px; padding: 10px 12px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); color: var(--text);" />
+        <input aria-label="Phone" name="phone" placeholder="Phone" style="flex:1; min-width: 160px; padding: 10px 12px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); color: var(--text);" />
+        <button type="submit" class="btn primary">Send</button>
+        <a class="btn ghost" href="tel:+10000000000">Call now</a>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">© <span id="year"></span> Atlas House Lifting • Licensed & Insured</div>
+  </footer>
+</body>
 </html>
